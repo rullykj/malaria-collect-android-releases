@@ -1,0 +1,1444 @@
+{
+  "title": "Malaria Survey Papua 08 2025",
+  "version": "1.6",
+  "questions": [
+    {
+      "type": "text",
+      "text": "Kode Tempat Perindukan",
+      "description": "Kode referensi untuk tempat perindukan",
+      "required": true,
+      "id": "e390ec16-b9ba-49df-90e3-9a0ef144fb81"
+    },
+    {
+      "type": "text",
+      "text": "Tempat Perindukan",
+      "description": "Deskripsi dari tempat perindukan",
+      "required": true,
+      "id": "43448880-6d7d-4a68-8b32-cfe73775e152"
+    },
+    {
+      "type": "radio",
+      "text": "Pengambilan Lokasi GPS",
+      "description": "Apakah dilakukan Lokasi dengan GPS di HP?",
+      "options": [
+        {
+          "text": "Yes",
+          "imageUrl": ""
+        },
+        {
+          "text": "No",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "q_location"
+    },
+    {
+      "type": "location",
+      "text": "Menggunakan GPS di HP untuk mendapatkan koordinat tempat perindukan",
+      "description": "Aktifkan GPS untuk mengisi koordinat secara otomatis.",
+      "dependsOn": "q_location",
+      "showIf": "Yes",
+      "required": true,
+      "id": "de896eed-e080-461a-891c-b56f8c62c0eb"
+    },
+    {
+      "type": "radio",
+      "text": "Provinsi",
+      "description": "Pilih nama provinsi sesuai lokasi pengambilan data.",
+      "required": true,
+      "options": [
+        {
+          "text": "Papua",
+          "imageUrl": ""
+        }
+      ],
+      "default": "Papua",
+      "id": "a63544df-f3b1-4373-a721-4b32976e7f66"
+    },
+    {
+      "id": "q_kabupaten",
+      "type": "radio",
+      "text": "Kabupaten/Kota",
+      "description": "Pilih nama Kabupaten sesuai lokasi pengambilan data.",
+      "required": true,
+      "options": [
+        {
+          "text": "Keerom",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kota Jayapura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Lainnya",
+          "imageUrl": ""
+        }
+      ],
+      "default": "Keerom"
+    },
+    {
+      "type": "text",
+      "text": "Kabupaten/Kota Lainnya",
+      "description": "Tuliskan Kabupaten/Kota Lainnya.",
+      "required": true,
+      "dependsOn": "q_kabupaten",
+      "showIf": "Lainnya",
+      "id": "e1b5ec56-a5a3-4a87-8d29-d66ee75ab3e9"
+    },
+    {
+      "id": "q_kecamatan",
+      "type": "radio",
+      "text": "Kecamatan",
+      "description": "Pilih Kecamatan tempat perindukan berada.",
+      "required": true,
+      "dependsOn": "q_kabupaten",
+      "showIf": "Keerom",
+      "options": [
+        {
+          "text": "Arso",
+          "imageUrl": ""
+        },
+        {
+          "text": "Arso Barat",
+          "imageUrl": ""
+        },
+        {
+          "text": "Arso Timur",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kaisenar",
+          "imageUrl": ""
+        },
+        {
+          "text": "Mannem",
+          "imageUrl": ""
+        },
+        {
+          "text": "Senggi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skanto",
+          "imageUrl": ""
+        },
+        {
+          "text": "Towe",
+          "imageUrl": ""
+        },
+        {
+          "text": "Waris",
+          "imageUrl": ""
+        },
+        {
+          "text": "Web",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yaffi",
+          "imageUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "q_kecamatan2",
+      "type": "radio",
+      "text": "Kecamatan",
+      "description": "Pilih Kecamatan tempat perindukan berada.",
+      "required": true,
+      "dependsOn": "q_kabupaten",
+      "showIf": "Kota Jayapura",
+      "options": [
+        {
+          "text": "Jayapura Utara",
+          "imageUrl": ""
+        },
+        {
+          "text": "Jayapura Selatan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Abepura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Muara Tami",
+          "imageUrl": ""
+        },
+        {
+          "text": "Heram",
+          "imageUrl": ""
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Arso",
+      "required": true,
+      "options": [
+        {
+          "text": "Arso Kota",
+          "imageUrl": ""
+        },
+        {
+          "text": "Asyaman",
+          "imageUrl": ""
+        },
+        {
+          "text": "Bagia",
+          "imageUrl": ""
+        },
+        {
+          "text": "Bibiosi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kwimi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sawabuun",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sawanawa",
+          "imageUrl": ""
+        },
+        {
+          "text": "Ubiyau",
+          "imageUrl": ""
+        },
+        {
+          "text": "Workwana",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yamta",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yanamaa",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yuwanain",
+          "imageUrl": ""
+        }
+      ],
+      "id": "e0d8eb01-8dcd-438b-935b-0c09758f0f77"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Arso Barat",
+      "required": true,
+      "options": [
+        {
+          "text": "Baburia",
+          "imageUrl": ""
+        },
+        {
+          "text": "Dukwia",
+          "imageUrl": ""
+        },
+        {
+          "text": "Ifia-fia",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sanggaria",
+          "imageUrl": ""
+        },
+        {
+          "text": "Warbo",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yammua",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yatu Raharja",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yowong",
+          "imageUrl": ""
+        }
+      ],
+      "id": "7dc7b0fe-0170-4660-b58e-7bd9e4b8e832"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Arso Timur",
+      "required": true,
+      "options": [
+        {
+          "text": "Amyu",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kibay",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kikere",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kriku",
+          "imageUrl": ""
+        },
+        {
+          "text": "Petewi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sangke",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skofro",
+          "imageUrl": ""
+        },
+        {
+          "text": "Suskun",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yetti",
+          "imageUrl": ""
+        }
+      ],
+      "id": "176663ab-7270-4c0d-aa7f-747eba50281b"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Kaisenar",
+      "required": true,
+      "options": [
+        {
+          "text": "Kaisenar",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kiambra",
+          "imageUrl": ""
+        },
+        {
+          "text": "Liket",
+          "imageUrl": ""
+        },
+        {
+          "text": "Onam",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tefanma Satu",
+          "imageUrl": ""
+        }
+      ],
+      "id": "003ad445-2d14-4f1a-80bd-309b5fe78502"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Mannem",
+      "required": true,
+      "options": [
+        {
+          "text": "Pyawi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Samyatami",
+          "imageUrl": ""
+        },
+        {
+          "text": "Uskwar",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wambes",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wembi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wonorejo",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yamara",
+          "imageUrl": ""
+        }
+      ],
+      "id": "02c67957-996a-4979-8fe7-e0fc0ee968b1"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Senggi",
+      "required": true,
+      "options": [
+        {
+          "text": "Molof",
+          "imageUrl": ""
+        },
+        {
+          "text": "Namla",
+          "imageUrl": ""
+        },
+        {
+          "text": "Senggi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Usku",
+          "imageUrl": ""
+        },
+        {
+          "text": "Waley",
+          "imageUrl": ""
+        },
+        {
+          "text": "Warlef",
+          "imageUrl": ""
+        },
+        {
+          "text": "Woslay",
+          "imageUrl": ""
+        }
+      ],
+      "id": "56630e6a-2a6b-4c0d-8124-7f00cc256b1d"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Skanto",
+      "required": true,
+      "options": [
+        {
+          "text": "Alang-alang Raya",
+          "imageUrl": ""
+        },
+        {
+          "text": "Arsopura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Gudang Garam",
+          "imageUrl": ""
+        },
+        {
+          "text": "Intaimelyan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Jaifuri",
+          "imageUrl": ""
+        },
+        {
+          "text": "Naramben",
+          "imageUrl": ""
+        },
+        {
+          "text": "Saefen Empat Dua",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skanto",
+          "imageUrl": ""
+        },
+        {
+          "text": "Traimelyan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Walma",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wiantre",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wulukubun",
+          "imageUrl": ""
+        }
+      ],
+      "id": "00ee7b8c-6fd2-4ffe-bedd-569664eb56c4"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Towe",
+      "required": true,
+      "options": [
+        {
+          "text": "Bias",
+          "imageUrl": ""
+        },
+        {
+          "text": "Jember",
+          "imageUrl": ""
+        },
+        {
+          "text": "Lules",
+          "imageUrl": ""
+        },
+        {
+          "text": "Milki",
+          "imageUrl": ""
+        },
+        {
+          "text": "Niliti",
+          "imageUrl": ""
+        },
+        {
+          "text": "Pris",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tefalma",
+          "imageUrl": ""
+        },
+        {
+          "text": "Terfones",
+          "imageUrl": ""
+        },
+        {
+          "text": "Towe Atas",
+          "imageUrl": ""
+        },
+        {
+          "text": "Towe Hitam",
+          "imageUrl": ""
+        }
+      ],
+      "id": "f43c0c38-c023-4b27-b845-097463bead27"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Waris",
+      "required": true,
+      "options": [
+        {
+          "text": "Ampas",
+          "imageUrl": ""
+        },
+        {
+          "text": "Banda",
+          "imageUrl": ""
+        },
+        {
+          "text": "Bompai",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kalifam",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kalimala",
+          "imageUrl": ""
+        },
+        {
+          "text": "Pund",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sack",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yuwainda",
+          "imageUrl": ""
+        }
+      ],
+      "id": "893d3161-0fb8-41e5-8808-bbaaa48f5060"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Web",
+      "required": true,
+      "options": [
+        {
+          "text": "Dubu",
+          "imageUrl": ""
+        },
+        {
+          "text": "Embi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Semografi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tatakra",
+          "imageUrl": ""
+        },
+        {
+          "text": "Umuraf",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yamraf Dua",
+          "imageUrl": ""
+        }
+      ],
+      "id": "1cc9c780-9f28-4d53-84a6-ab97f2404cca"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan",
+      "showIf": "Yaffi",
+      "required": true,
+      "options": [
+        {
+          "text": "Akarinda",
+          "imageUrl": ""
+        },
+        {
+          "text": "Amgotro",
+          "imageUrl": ""
+        },
+        {
+          "text": "Fafenumbu",
+          "imageUrl": ""
+        },
+        {
+          "text": "Jifanggry",
+          "imageUrl": ""
+        },
+        {
+          "text": "Monggoafi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yabanda",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yuruf",
+          "imageUrl": ""
+        }
+      ],
+      "id": "e05b8c14-3954-463b-a6c1-ab0152240e5e"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan2",
+      "showIf": "Jayapura Utara",
+      "required": true,
+      "options": [
+        {
+          "text": "Angkasapura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Bayangkara",
+          "imageUrl": ""
+        },
+        {
+          "text": "Gurabesi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Imbi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kayo Batu",
+          "imageUrl": ""
+        },
+        {
+          "text": "Mandala",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tanjung Ria",
+          "imageUrl": ""
+        },
+        {
+          "text": "Trikora",
+          "imageUrl": ""
+        }
+      ],
+      "id": "3e8f9130-79eb-4149-a271-a96f854af39a"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan2",
+      "showIf": "Jayapura Selatan",
+      "required": true,
+      "options": [
+        {
+          "text": "Ardipura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Argapura",
+          "imageUrl": ""
+        },
+        {
+          "text": "Entrop",
+          "imageUrl": ""
+        },
+        {
+          "text": "Hamadi",
+          "imageUrl": ""
+        },
+        {
+          "text": "Numbay",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tahima Sorama",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tobati",
+          "imageUrl": ""
+        }
+      ],
+      "id": "af36cf29-4802-4c02-8aaa-855697819969"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan2",
+      "showIf": "Abepura",
+      "required": true,
+      "options": [
+        {
+          "text": "Abepantai",
+          "imageUrl": ""
+        },
+        {
+          "text": "Asano",
+          "imageUrl": ""
+        },
+        {
+          "text": "Awiyo",
+          "imageUrl": ""
+        },
+        {
+          "text": "Enggros",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kota Baru",
+          "imageUrl": ""
+        },
+        {
+          "text": "Koya Koso",
+          "imageUrl": ""
+        },
+        {
+          "text": "Nafri",
+          "imageUrl": ""
+        },
+        {
+          "text": "Vim",
+          "imageUrl": ""
+        },
+        {
+          "text": "Wahno",
+          "imageUrl": ""
+        },
+        {
+          "text": "Way Mhorock",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yobe",
+          "imageUrl": ""
+        }
+      ],
+      "id": "070ba211-bacc-471d-b22b-7c9260831fe1"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan2",
+      "showIf": "Muara Tami",
+      "required": true,
+      "options": [
+        {
+          "text": "Holtekamp",
+          "imageUrl": ""
+        },
+        {
+          "text": "Koya Barat",
+          "imageUrl": ""
+        },
+        {
+          "text": "Koya Tengah",
+          "imageUrl": ""
+        },
+        {
+          "text": "Koya Timur",
+          "imageUrl": ""
+        },
+        {
+          "text": "Mosso",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skouw Mabo",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skouw Sae",
+          "imageUrl": ""
+        },
+        {
+          "text": "Skouw Yambe",
+          "imageUrl": ""
+        }
+      ],
+      "id": "5d5b4042-251d-4cd3-b8ab-158e3f18d1ad"
+    },
+    {
+      "type": "radio",
+      "text": "Desa/Kelurahan",
+      "description": "Masukkan nama Desa/Kelurahan tempat perindukan berada.",
+      "dependsOn": "q_kecamatan2",
+      "showIf": "Heram",
+      "required": true,
+      "options": [
+        {
+          "text": "Hedam",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kampung Waena",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kelurahan Waena",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yabansai",
+          "imageUrl": ""
+        },
+        {
+          "text": "Yoka",
+          "imageUrl": ""
+        }
+      ],
+      "id": "174a83e8-afed-4cd1-9644-527a3b94c5c4"
+    },
+    {
+      "type": "text",
+      "text": "Dusun/RW",
+      "description": "Masukkan dusun atau RW dari lokasi survei.",
+      "required": false,
+      "id": "04c00b12-da1f-4124-98a6-90699a2d9588"
+    },
+    {
+      "type": "text",
+      "text": "Kampung/RT",
+      "description": "Masukkan kampung atau RT jika diketahui.",
+      "required": false,
+      "id": "ef8e35d7-e361-43e8-8be2-eb75d3ac1adb"
+    },
+    {
+      "id": "q_lh",
+      "type": "checkbox",
+      "text": "Lingkungan Hidup",
+      "description": "Pilih semua jenis lingkungan yang menggambarkan area perindukan.",
+      "options": [
+        {
+          "text": "Hutan Kering",
+          "imageUrl": ""
+        },
+        {
+          "text": "Hutan Rawa",
+          "imageUrl": ""
+        },
+        {
+          "text": "Daerah Bakau",
+          "imageUrl": ""
+        },
+        {
+          "text": "Padang Rumput Terbuka",
+          "imageUrl": ""
+        },
+        {
+          "text": "Budidaya Tanaman",
+          "imageUrl": ""
+        },
+        {
+          "text": "Persawahan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Pantai/Pesisir",
+          "imageUrl": ""
+        },
+        {
+          "text": "Daerah Perdesaan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kolam/Rawa Terbuka",
+          "imageUrl": ""
+        },
+        {
+          "text": "Campuran Hutan/Semak",
+          "imageUrl": ""
+        },
+        {
+          "text": "Lainnya",
+          "imageUrl": ""
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "text": "Lingkungan Hidup Lainnya",
+      "description": "Tuliskan jenis lingkungan yang menggambarkan area perindukan.",
+      "required": true,
+      "dependsOn": "q_lh",
+      "showIf": "Lainnya",
+      "id": "3d570636-ba0e-4bfa-88f4-f78a3ee84763"
+    },
+    {
+      "id": "q_habitat",
+      "type": "checkbox",
+      "text": "Deskripsi Habitat Secara Umum",
+      "description": "Pilih deskripsi habitat yang paling sesuai.",
+      "options": [
+        {
+          "text": "Laguna (Tertutup)",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kolam/Danau (Air Terbuka)",
+          "imageUrl": ""
+        },
+        {
+          "text": "Rawa (Vegetasi Tertutup)",
+          "imageUrl": ""
+        },
+        {
+          "text": "Kolam Air Tanah",
+          "imageUrl": ""
+        },
+        {
+          "text": "Depresi Batuan Gamping",
+          "imageUrl": ""
+        },
+        {
+          "text": "Lubang Kepiting",
+          "imageUrl": ""
+        },
+        {
+          "text": "Aliran Tepi Arus Sungai",
+          "imageUrl": ""
+        },
+        {
+          "text": "Persawahan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Depresi Pasang Surut",
+          "imageUrl": ""
+        },
+        {
+          "text": "Genangan Air Hujan",
+          "imageUrl": ""
+        },
+        {
+          "text": "Rembesan/Mata Air/Sumur",
+          "imageUrl": ""
+        },
+        {
+          "text": "Hutan Banjir",
+          "imageUrl": ""
+        },
+        {
+          "text": "Parit/selokan/got",
+          "imageUrl": ""
+        },
+        {
+          "text": "Lainnya",
+          "imageUrl": ""
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "text": "Habitat Secara Umum Lainnya",
+      "description": "Tuliskan deskripsi habitat yang paling sesuai.",
+      "required": true,
+      "dependsOn": "q_habitat",
+      "showIf": "Lainnya",
+      "id": "67ab74e5-03b3-4658-9993-b3246e0c9c55"
+    },
+    {
+      "type": "radio",
+      "text": "Jarak dari rumah terdekat",
+      "description": "Pilih estimasi jarak terdekat dari rumah penduduk.",
+      "options": [
+        {
+          "text": "≤ 100 m",
+          "imageUrl": ""
+        },
+        {
+          "text": "101 m - 500 m",
+          "imageUrl": ""
+        },
+        {
+          "text": "501 m - 1000 m",
+          "imageUrl": ""
+        },
+        {
+          "text": "> 1000 m",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "7acd022a-afc3-41e3-ae72-ab1bc7e8b6a2"
+    },
+    {
+      "type": "radio",
+      "text": "Pencahayaan",
+      "description": "Tentukan tingkat pencahayaan di habitat.",
+      "options": [
+        {
+          "text": "Teduh",
+          "imageUrl": ""
+        },
+        {
+          "text": "Disinari Matahari",
+          "imageUrl": ""
+        },
+        {
+          "text": "Terlindung dan Disinari Matahari",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "ee09a73f-93e7-4dd3-866a-1ce845937a9b"
+    },
+    {
+      "type": "radio",
+      "text": "Stabilitas Habitat",
+      "description": "Pilih jenis stabilitas habitat di lokasi.",
+      "options": [
+        {
+          "text": "Permanen/Tetap",
+          "imageUrl": ""
+        },
+        {
+          "text": "Semi-permanen",
+          "imageUrl": ""
+        },
+        {
+          "text": "Sementara",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "63f04c58-4e0b-4364-a026-fb56a7ccbc16"
+    },
+    {
+      "type": "radio",
+      "text": "Air yang mengalir",
+      "description": "Apakah air di lokasi diam atau mengalir?",
+      "options": [
+        {
+          "text": "Diam (tidak mengalir)",
+          "imageUrl": ""
+        },
+        {
+          "text": "Mengalir",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "57a88537-2ffa-42f9-843a-31b1d8d18a22"
+    },
+    {
+      "type": "radio",
+      "text": "Kejernihan Air",
+      "description": "Pilih tingkat kejernihan air.",
+      "options": [
+        {
+          "text": "Jernih",
+          "imageUrl": ""
+        },
+        {
+          "text": "Keruh",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "5dc7daf5-71c1-4489-8c91-5bf51ad68704"
+    },
+    {
+      "type": "radio",
+      "text": "Kedalaman Air",
+      "description": "Pilih kedalaman rata-rata air.",
+      "options": [
+        {
+          "text": "< 1 m",
+          "imageUrl": ""
+        },
+        {
+          "text": ">= 1 m",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "c247d11e-5420-4e77-958b-f884f1540327"
+    },
+    {
+      "id": "q_tanaman",
+      "type": "checkbox",
+      "text": "Tanaman Air",
+      "description": "Pilih semua jenis tanaman air yang ditemukan.",
+      "options": [
+        {
+          "text": "Teratai",
+          "imageUrl": "http://157.66.34.175:3008/images/teratai.jpg"
+        },
+        {
+          "text": "Genjer/Kelayan",
+          "imageUrl": "http://157.66.34.175:3008/images/genjer.jpg"
+        },
+        {
+          "text": "Kangkung",
+          "imageUrl": "http://157.66.34.175:3008/images/kangkung.jpg"
+        },
+        {
+          "text": "Eceng Gondok",
+          "imageUrl": "http://157.66.34.175:3008/images/eceng_gondok.jpg"
+        },
+        {
+          "text": "Rumput",
+          "imageUrl": "http://157.66.34.175:3008/images/rumput.jpg"
+        },
+        {
+          "text": "Lumut",
+          "imageUrl": "http://157.66.34.175:3008/images/lumut.jpg"
+        },
+        {
+          "text": "Ganggang hijau (benang halus)",
+          "imageUrl": "http://157.66.34.175:3008/images/ganggang_hijau.jpg"
+        },
+        {
+          "text": "Apu",
+          "imageUrl": "http://157.66.34.175:3008/images/apu.jpg"
+        },
+        {
+          "text": "Paku Air",
+          "imageUrl": "http://157.66.34.175:3008/images/paku_air.jpg"
+        },
+        {
+          "text": "Lainnya",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak ada tanaman air",
+          "imageUrl": ""
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "text": "Tanaman Air Lainnya",
+      "description": "Tuliskan nama Tanaman Air nya.",
+      "required": true,
+      "dependsOn": "q_tanaman",
+      "showIf": "Lainnya",
+      "id": "63a6d93c-b386-411d-8403-f9f57bc5073c"
+    },
+    {
+      "id": "q_predator",
+      "type": "checkbox",
+      "text": "Predator",
+      "description": "Pilih predator yang ditemukan dalam habitat.",
+      "options": [
+        {
+          "text": "Tidak ada",
+          "imageUrl": ""
+        },
+        {
+          "text": "Ikan (ikan kepala timah dll)",
+          "imageUrl": "http://157.66.34.175:3008/images/ikan.jpg"
+        },
+        {
+          "text": "Larva capung",
+          "imageUrl": "http://157.66.34.175:3008/images/larva_capung.jpg"
+        },
+        {
+          "text": "Anggang- anggang",
+          "imageUrl": "http://157.66.34.175:3008/images/anggang.jpg"
+        },
+        {
+          "text": "Kepik air",
+          "imageUrl": "http://157.66.34.175:3008/images/kepik_air.jpg"
+        },
+        {
+          "text": "Kecebong",
+          "imageUrl": "http://157.66.34.175:3008/images/kecebong.jpg"
+        },
+        {
+          "text": "Lainnya",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "text": "Predator Lainnya",
+      "description": "Tuliskan nama Predator nya.",
+      "required": true,
+      "dependsOn": "q_predator",
+      "showIf": "Lainnya",
+      "id": "0905fb78-c10e-4883-90d1-841fe69e5eaf"
+    },
+    {
+      "type": "radio",
+      "text": "Pengukuran pH, salinitas dan suhu air",
+      "description": "Apakah dilakukan pengukuran kualitas air?",
+      "options": [
+        {
+          "text": "Yes",
+          "imageUrl": ""
+        },
+        {
+          "text": "No",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "q1_ph"
+    },
+    {
+      "type": "number",
+      "text": "pH",
+      "description": "Isi nilai pH jika dilakukan pengukuran.",
+      "required": false,
+      "min": 0,
+      "max": 14,
+      "dependsOn": "q1_ph",
+      "showIf": "Yes",
+      "id": "45a39191-bef2-457f-a383-34009bf85572"
+    },
+    {
+      "type": "number",
+      "text": "Salinitas",
+      "description": "Isi salinitas dalam satuan ppt jika diukur.",
+      "required": false,
+      "min": 0,
+      "max": 38,
+      "dependsOn": "q1_ph",
+      "showIf": "Yes",
+      "id": "bf5be089-e92c-47c3-bb3e-f5d69f3d83cb"
+    },
+    {
+      "type": "number",
+      "text": "Suhu Air",
+      "description": "Masukkan suhu air dalam derajat Celcius.",
+      "required": false,
+      "min": 0,
+      "max": 70,
+      "dependsOn": "q1_ph",
+      "showIf": "Yes",
+      "id": "967057d5-7aa6-4eeb-9f67-81e0807c2f40"
+    },
+    {
+      "id": "q_date",
+      "type": "date",
+      "text": "Tanggal dari survei larva",
+      "description": "Tanggal kegiatan survei larva",
+      "required": true
+    },
+    {
+      "type": "time",
+      "id": "q_time",
+      "text": "Jam kegiatan survei larva",
+      "description": "Jam kegiatan survei larva",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "text": "Photo dari lokasi tempat perindukan",
+      "description": "Apakah anda ingin mengambil photo lokasi tempat perindukan?",
+      "options": [
+        {
+          "text": "Yes",
+          "imageUrl": ""
+        },
+        {
+          "text": "No",
+          "imageUrl": ""
+        }
+      ],
+      "required": true,
+      "id": "q1_photo"
+    },
+    {
+      "id": "q_images",
+      "type": "images",
+      "text": "Photo dari lokasi tempat perindukan",
+      "description": "Apakah anda ingin mengambil photo lokasi tempat perindukan?",
+      "required": true,
+      "dependsOn": "q1_photo",
+      "showIf": "Yes",
+      "images": [
+        {
+          "id": "img_1",
+          "text": "Gambar 1 dari Tempat Dipper",
+          "description": "Ambil gambar/photo yang menggambarkan habitat dari jarak dekat",
+          "required": true
+        },
+        {
+          "id": "img_2",
+          "text": "Gambar 2 dari Tempat Dipper",
+          "description": "Ambil gambar/photo yang menggambarkan habitat dari jarak jauh",
+          "required": true
+        },
+        {
+          "id": "img_3",
+          "text": "Gambar 3 Lingkungan",
+          "description": "Ambil gambar/photo lingkungan habitat berada",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "larva_method",
+      "type": "radio",
+      "text": "Cara pengumpulan sampel larva",
+      "description": "Pilih metode yang digunakan untuk mengumpulkan larva.",
+      "options": [
+        {
+          "text": "Penciduk (Dipper)",
+          "imageUrl": ""
+        },
+        {
+          "text": "Pipet",
+          "imageUrl": ""
+        },
+        {
+          "text": "Tidak tahu",
+          "imageUrl": ""
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "number",
+      "text": "Jumlah cidukan yang dilakukan",
+      "description": "Hitung jumlah cidukan yang dilakukan",
+      "required": true,
+      "min": 0,
+      "max": 50,
+      "dependsOn": "larva_method",
+      "showIf": "Penciduk (Dipper)",
+      "id": "967057d5-7aa6-4eeb-9f67-81e0807c2f40"
+    },
+    {
+      "id": "larva_1_anopheles",
+      "type": "number",
+      "text": "Jumlah larva anopheles",
+      "description": "Masukkan jumlah larva anopheles yang terdeteksi.",
+      "required": true,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "larva_1_non_anopheles",
+      "type": "number",
+      "text": "Jumlah larva non anopheles",
+      "description": "Masukkan jumlah larva non-anopheles yang ditemukan.",
+      "required": true,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "text",
+      "text": "Kode Staf",
+      "description": "Nama dari staf yang mengisi informasi ini",
+      "required": true,
+      "id": "7f55028b-1b11-47bb-81d0-35515c6ff938"
+    }
+  ]
+}
